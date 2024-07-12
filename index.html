@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="x-UA-Compatible" content="IE-edge">
+        <meta name="viewpint" content="width=device_width, initial_scale=1.0">
+        <title>Webpage</title>
+        <!--- Internal CSS File---->
+
+    </head>
+    <body>
+      
+        <style>
+            .wrapper{
+                font-family: "raleway";
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                background: #fafafa;
+            }
+             
+            .wrapper h1{
+                font-size: 3em;
+                margin: 25px 10px;
+                text-align: center;
+                font-weight: 600;
+                color: red;
+            }
+
+            .content-box{
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                width: 1000px;
+                margin-top: 30px;
+            }
+
+            .card{
+                min-height: 220px;
+                width: 320px;
+                padding: 30px;
+                border-radius: 5px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                background: blue;
+                margin: 7px 2px;
+                box-shadow: 0px 15px 25px rgb(red, green, blue);
+                transition: 0.3s;
+            }
+
+            .card i{
+                margin: 10px;
+                color: #ff5724;
+            }
+
+            .card h2{
+                margin-bottom: 12px;
+                font-weight: 700px;
+                text-align: center;
+            }
+
+            .card p{
+                color: white;
+                text-align: center;
+            }
+
+            .card:hover{
+                background-color: red;
+            }
+            .card:hover i,
+            .card :hover p{
+                color: red;   
+            }
+            .card:hover h2{
+                font-weight: 500;
+                
+            }
+
+            .card:nth-child(1):hover{
+                background: linear-gradient(45deg,
+                                            rgba(255,28,8,0,8) ox,
+                                            rgba(255,0,82,0,8) 100%),
+                                            url(`image/p1.jpg`);
+                background-size: cover;
+            }
+
+            .card:nth-child(2):hover{
+                background: linear-gradient(45deg,
+                                            rgba(255,28,8,0,8) ox,
+                                            rgba(255,0,82,0,8) 100x),
+                                            url(`image/p2.jpg`);
+                background-size: cover;
+            }
+            .card:nth-child(3):hover{
+                background: linear-gradient(45deg,
+                                            rgba(255,28,8,0,8) ox,
+                                            rgba(255,0,82,0,8) 100x),
+                                            url(`image/p3.jpg`);
+                background-size: cover;
+            }
+            .card:nth-child(4):hover{
+                background: linear-gradient(45deg,
+                                            rgba(255,28,8,0,8) ox,
+                                            rgba(255,0,82,0,8) 100x),
+                                            url(`image/p4.jpg`);
+                background-size: cover;
+            }
+            .card:nth-child(5):hover{
+                background: linear-gradient(45deg,
+                                            rgba(255,28,8,0,8) ox,
+                                            rgba(255,0,82,0,8) 100x),
+                                            url(`image/p5.jpg`);
+                background-size: cover;
+            }
+            .card:nth-child(6):hover{
+                background: linear-gradient(45deg,
+                                            rgba(255,28,8,0,8) ox,
+                                            rgba(255,0,82,0,8) 100x),
+                                            url(`image/p6.jpg`);
+                background-size: cover;
+            }
+
+            .logo{
+                color: orange;
+                padding-left: 50px;
+                float: center;
+                padding-top: 20px;
+            }
+
+            .main{
+                width: 100px;
+                background: linear-gradient(to top,rgba(0,0,0,0.5)50x, rgba(0,0,0,0.5)50px), url(1.jpg);
+                background-position: center;
+                background-size: cover;
+                height: 100px;
+            }
+            .menu{
+                width: 400px;
+                float: left;
+                height: 0px;
+                margin-top: 5px;
+            }
+
+            ul{
+                float: left;
+                display: flex;
+                justify-content: center;
+                align-items: center;           
+             }
+            
+            ul li{
+                list-style: none;
+                margin-left: 62px;
+                margin-top: 20px;
+                font-size: 15px;
+            }
+            ul li a{
+                text-decoration: none;
+                color: blue;
+                font-family: Arial;
+                font-weight: bold;
+                transition: 0.4s ease-in-out;
+
+            }
+
+            ul li a:hover{
+                color: red;
+            }
+
+            .search{
+                width: 330px;
+                float: left;
+                margin-left: 279px;
+            }
+
+            .src{
+                font-family: 'Times New Roman';
+                width: 200px;
+                height: 40px;
+                background: transparent;
+                border: 1px solid orangered;
+                margin-top: 13px;
+                color: white;
+                border-right: none;
+                font-size: 16px;
+                float: left;
+                padding: 10px;
+                border-bottom-left-radius: 5px;
+                border-top-left-radius: 5px;
+            }
+
+            .btn{
+                width: 100px;
+                height: 40px;
+                background: orangered;
+                border: 2px solid orangered;
+                margin-top: 13px;
+                color: white;
+                font-size: 15px;
+                border-bottom-left-radius: 5px;
+                border-top-left-radius: 5px;
+            }
+            .btn:focus{
+                outline: none;
+            }
+
+            .src:focus{
+                outline: none;
+            }
+
+            .content{
+                width: 1200px;
+                height: auto;
+                margin: auto;
+                color: black;
+                position: relative;
+            }
+
+            .content .par{
+                padding-left: 20px;
+                padding-bottom: 25px;
+                font-family: Arial;
+                letter-spacing: 1.2px;
+                line-height: 30px;
+            }
+
+            .content  h1{
+                font-family: 'Times New Roman';
+                font-size: 50px;
+                padding-left: 20px;
+                margin-top: 9px;
+                letter-spacing: 2px;
+            }
+
+            .content .cn{
+                width: 160px;
+                height: 40px;
+                background: orangered;
+                border: none;
+                margin-bottom: 10px;
+                margin-left: 20px;
+                font-size: 18px;
+                border-radius: 10px;
+                cursor: pointer;
+                transform: .4s ease;
+            }
+
+            .content .cn a{
+                text-decoration: none;
+                color: black;
+                transition: .3s ease;
+            }
+
+            .cn:hover{
+                background-color: purple;
+            }
+
+            .content span{
+                color: red;
+                font-size: 60px;
+            }
+
+            .form{
+                width: 250px;
+                height: 380px;
+                background: linear-gradient(to top, rgba(0,0,0,0.8)50x),rgba(0,0,0,0.8);
+                position: absolute;
+                top: 20px;
+                left: 870px;
+                border-radius: 10px;
+                padding: 25px;
+            }
+
+            .form h2{
+                width: 200px;
+                font-family: sans-serif;
+                text-align: center;
+                color: red;
+                font-size: 16px;
+                background-color: purple;
+                border-radius: 8px;
+                padding: 4px;
+            }
+
+            .form imput{
+                width: 200px;
+                height: 30px;
+                background: transparent;
+                border-bottom: 10px solid  orangered;
+                border-top: none;
+                border-right: none;
+                border-left: none;
+                color: red;
+                font-size: 10px;
+                letter-spacing: 1px;
+                margin-top: 25px;
+                font-family: sans-serif;
+            }
+
+            .form input:hover{
+                color: black;
+            }
+
+            .form imput:focus{
+                outline: none;
+            }
+
+            ::placeholder{
+                color: brown;
+                font-family: Arial;
+            }
+
+            .liw{
+                padding-top: 15px;
+                padding-bottom: 10px;
+                text-align: center;
+            }
+        </style>
+        <head>
+        <div id="header">
+          <div class="container">
+            <nav>
+            <ul>
+                <li><a href="#HOME">HOME</a></li>
+                <li><a href="#ABOUT">ABOUT</a></li>
+                <li><a href="#SERVICE">SERVICE</a></li>
+                <li><a href="#DESIGN">DESIGN</a></li>
+                <li><a href="#CONTACT">CONTACT</a></li>
+            </ul>
+            </nav>
+            </di>
+            </head>
+            <div class="navbar">
+                    <h2 class="logo">PharmTher</h2>
+                    <img src="images/hospital.jpg" width="200" height="200">
+                </div>
+        </div>
+        <div class="content">
+            <h1>Web Design $ <br><span>Development</span> <br>Course</h1>
+            <p class="par"><br>Hi, i am Cornelius Korir, a specialist in nursing at Kenyatta hospital.
+                <br>We offer services such as SURGICAL,DIAGNOSIS,CANCER TREATMENT,MENTAL HEALTH,DEMATOLOGY,ENDOSCOPY,HAEMOPHILIA and many others.
+                Kenyatta Hospital is a reputable hospital agency. Our design projects have exceeded expectations of our clients across a variety of industries, including those who have commissioned healthcare websites.
+               <br> At Digital Logic, we continue to innovate in order to provide the best possible results for our clients.
+               <br> Because of our experience and attention to detail, we’re able to provide premium hospital web design services you simply don’t see with many other agencies.</p>
+
+
+               <div class="wrapper">
+                <h1>OUR SERVICES</h1>
+                <p>Specialty Out Patient Clinics · Palliative Medicine · Urology and Renal Services · Internal Medicine · Obstetrics and Gynaecology · Ophthalmology · Nutrition ...
+                </p>
+        
+               <div class="content-box">
+                <div class="card">
+                    <i class="bx bx-bar-chart-alt bx-md"></i>
+                    <h2>Special Outpatient Clinics Services</h2>
+                    <p>Our Specialized outpatient clinics offer care to patients in specialty areas such as cardiology, urology, nephrology, pain management, wound care, and chemotherapy treatment and/or radiation treatments at outpatient cancer centers.
+                    </p>
+                </div>
+        
+                 <div class="card">
+                     <i class="bx bx-laptop bx-md"></i>
+                     <h2>Palliative Medicine</h2>
+                     <p>Palliative care is specialized medical care for people living with a serious illness, such as cancer or heart failure.Our services to Patients in palliative care may receive medical care for their symptoms, or palliative care, along with treatment intended to cure their serious illness.
+                     </p>
+                </div>
+        
+                <div class="card">
+                    <i class="bx bx-lin-chart bx-md"></i>
+                    <h2>Urology and Renal services</h2>
+                    <p>Nephrologists specifically treat diseases that affect the kidneys and their ability to function, such as diabetes or kidney failure. Urologists treat conditions of the urinary tract, including those that can be affected by the kidneys such as kidney stones and obstruction.
+                    </p>
+                </div>
+           
+                 <div class="card">
+                 <i class="bx bx-mail-send bx-md"></i>
+                    <h2>Internal Medicine services</h2>
+                    <p>This is the medical specialty dealing with the prevention, diagnosis, and treatment of internal diseases. It involves the management of systemic illnesses without involving major surgery.
+                    </p>
+                 </div>
+        
+                <div class="card">
+                    <i class="bx bx-bar-chart-alt bx-md"></i>
+                    <h2>Obstetrics and Gynaecology services</h2>
+                    <p>Women's health services.
+                         A short list of routine women's health services includes pap smears, breast cancer screenings, gynecological cancer screenings, pelvic pain evaluations and urinary incontinence treatment. ...
+                    </p>
+                </div>
+        
+                <div class="card">
+                    <i class="bx bx-bar-chart-alt bx-md"></i>
+                    <h2>Nutrition</h2>
+                    <p>Our hospital's nutrition team provides counseling, planning, & collaboration for medical nutrition, food services, research, & community outreach.
+                    </p>
+                </div>
+        
+                <div class="card">
+                    <i class="bx bx-bar-paint bx-md"></i>
+                    <h2>Ophthalmology</h2>
+                    <p>Comprehensive eye exam and treatment for all eye conditions and diseases.
+                        Eye surgeries i.e. cataract, eye injuries, glaucoma and many others.
+                        Optical services.
+                        Low vision services.
+                        Laser treatment.
+                        Visual field exam.
+                    </p>
+                </div> 
+             <button class="cn"><a href="#">JOIN US</a></button>
+
+             <div class="form">
+                <h2>Login Here</h2>
+                <imput type="email" placeholder="Enter Email Here">
+                <imput type="password" name="" placeholder="Enter Password Here">
+                <button class="btn"><a href="#">Login</a></button>
+
+                <p class="link">Don’t have an access account<br>
+                <a href="#">Sign up </a>here</a></p>
+                <p class="liw">Log in with</p>
+
+            
+                </div>
+             </div>
+        </div>
+
+        </div>
+    </body>
+</html>
